@@ -1,0 +1,61 @@
+Install eqCheck
+
+###############################################################################
+###                 Installing Python and modules                           ###
+###############################################################################
+
+Install Anaconda:
+
+    1) download code from anaconda website:
+     https://www.anaconda.com/products/individual
+
+    2) follow installer directions, making note of installation path.
+      - It should be installed in ~/opt/anaconda3
+      - There should be an option to add conda to your path.
+        CHECK THIS OPTION for Mac installs.
+      - If you accidentaly skip this option, simply navigate to anaconda3
+        directory in terminal and enter:
+                            % source bin/activate
+                            % conda init
+
+
+Create new Conda enviornment:
+
+      % conda create -n eqCheck python=3.6
+
+Activate Conda enviornment:
+
+      % conda activate eqCheck
+
+Install Packages:
+
+      % conda install matplotlib
+      % conda install argparse
+      % conda install pandas
+      % conda install pexpect
+
+###############################################################################
+###                    Installing eqCheck script                            ###
+###############################################################################
+
+1) Put script in a directory whose path will not be altered.
+  - It's reccommended that you create a new directory, ~/software,
+    and put it in there.
+
+2) Allow the script to be executed:
+      % chmod +x eqCheck.py
+
+2) Create a symbolic link between the script and your binary directory.
+  - If eqCheck is already in bin from older version, the old link must be
+    removed first:
+      % rm /usr/local/bin/eqCheck
+  - general format:
+      % ln -s <path to eqCheck.py> <path to bin>
+  - Example:
+      % ln -s /Users/williamstone/software/eqCheck.py /usr/local/bin/eqCheck
+
+3) Test that script works:
+      % eqCheck -h
+
+4) Test with test dataset:
+      % eqCheck -C
