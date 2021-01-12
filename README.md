@@ -1,0 +1,1 @@
+# eqCheck-Script-version
