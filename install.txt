@@ -21,7 +21,7 @@ Install Anaconda:
 
 Create new Conda enviornment:
 
-      % conda create -n eqCheck python=3.6
+      % conda create -n eqCheck
 
 Activate Conda enviornment:
 
@@ -30,7 +30,6 @@ Activate Conda enviornment:
 Install Packages:
 
       % conda install matplotlib
-      % conda install argparse
       % conda install pandas
       % conda install pexpect
 
